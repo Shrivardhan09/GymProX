@@ -1,12 +1,12 @@
 import { SelectedPage } from "@/shared/share"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import ActionButton from "@/shared/ActionButton"
-import gymprox from "@/assets/gympro.png"
+import gymprox from "../../assets/gympro.png"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import BodyBuilder from "@/assets/fitness-img.jpg"
-import SForbes from "@/assets/SForbes.png"
-import SFortune from "@/assets/SFortune.png"
-import SRedBull from "@/assets/SredBull.png"
+import BodyBuilder from "../../assets/fitness-img.jpg"
+import SForbes from "../../assets/SForbes.png"
+import SFortune from "../../assets/SFortune.png"
+import SRedBull from "../../assets/SRedBull.png"
 import { motion } from "framer-motion"
 
 
