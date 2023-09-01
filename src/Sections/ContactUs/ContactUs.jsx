@@ -33,7 +33,7 @@ const ContactUs = ({ setSelectedPage }) => {
                     <div className="basis-3/5 font-montserrat text-3xl font-bold text-white px-9">
                         <span className=" text-yellow-500">JOIN GYMPROX</span> TO GET IN FIT AND HEALTY
                     </div>
-                    <p className="my-5 text-lg">
+                    <p className="m-5 w-3/5 text-lg">
                         GYMPROX Gym is the perfect place to get in shape and improve your health. We offer a variety of state-of-the-art equipment, personal trainers, and group fitness classes to help you reach your fitness goals.
                     </p>
                 </motion.div>
