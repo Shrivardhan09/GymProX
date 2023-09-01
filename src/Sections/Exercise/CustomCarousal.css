@@ -1,0 +1,34 @@
+/* CustomCarousel.css */
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: fit-content; /* Set width to fit one card at a time */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .prev-button,
+  .next-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+  
+  .next-button {
+    margin-left: 1rem;
+  }
+  
