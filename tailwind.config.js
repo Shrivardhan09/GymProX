@@ -24,7 +24,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       content: {
-        gymprox: "url('./assets/gymproxtransparentbackground.png')",
+        gymprox: "url('../../assets/gymproxtransparentbackground.png')",
       },
     },
     screens: {
