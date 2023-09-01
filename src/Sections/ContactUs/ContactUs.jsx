@@ -16,7 +16,7 @@ const ContactUs = ({ setSelectedPage }) => {
     };
 
     return (
-        <section className="pt-24 pb-32 bg-[url()] bg-no-repeat md:bg-cover sm:object-contain">
+        <section className="pt-24 pb-32 bg-contact-bg bg-no-repeat md:bg-cover sm:object-contain">
             <motion.div
                 className="w-full"
                 onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
