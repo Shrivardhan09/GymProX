@@ -16,7 +16,7 @@ const ContactUs = ({ setSelectedPage }) => {
     };
 
     return (
-        <section className="pt-24 pb-32 bg-contact-bg bg-no-repeat md:bg-cover sm:object-contain">
+        <section className="pt-24 pb-32 bg-contact-bg bg-no-repeat md:bg-cover sm:bg-center">
             <motion.div
                 className="w-full"
                 onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
@@ -33,7 +33,7 @@ const ContactUs = ({ setSelectedPage }) => {
                     <div className="basis-3/5 font-montserrat text-3xl font-bold text-white px-9">
                         <span className=" text-yellow-500">JOIN GYMPROX</span> TO GET IN FIT AND HEALTY
                     </div>
-                    <p className="m-5 w-3/5 text-lg">
+                    <p className="mx-7 my-5 w-4/5 text-lg text-white">
                         GYMPROX Gym is the perfect place to get in shape and improve your health. We offer a variety of state-of-the-art equipment, personal trainers, and group fitness classes to help you reach your fitness goals.
                     </p>
                 </motion.div>

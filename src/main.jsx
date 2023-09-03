@@ -8,6 +8,10 @@ import {
 } from "react-router-dom"
 import ExerciseDetails from './Sections/Exercise/ExerciseDetails/ExerciseDetails.jsx'
 
+import Signup from './Sections/Auth/Signup.jsx'
+import LogIn from './Sections/Auth/Login.jsx'
+
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +22,15 @@ const router = createBrowserRouter([
     path: "/exercises/:id",
     element: <ExerciseDetails />,
   },
+  {
+    path: "/gymprox/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/gymprox/login",
+    element: <LogIn />,
+  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(

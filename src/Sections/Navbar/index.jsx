@@ -1,22 +1,22 @@
-import { Menu, X } from "lucide-react"
-import logo from "@/assets/gymprox-logo.png"
-import Link from "./Link"
-import useMediaQuery from "@/hooks/useMediaQuery"
-import { useState } from "react"
-import ActionButton from "@/shared/ActionButton"
-import TransitionLogo from "@/assets/logoTransition.png"
-import MobileLink from "./MobileLink"
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/gymprox-logo.png";
+import LinkComponent from "./Link";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { useState } from "react";
+import ActionButton from "@/shared/ActionButton";
+import TransitionLogo from "@/assets/logoTransition.png";
+import MobileLink from "./MobileLink";
+import { Link } from "react-router-dom"
 
 const Navbar = ({ selectedPage, setSelectedPage, isTopPage }) => {
-    const flexBetween = "flex items-center justify-between"
-    const [isMenu, setIsMenu] = useState(false)
-    const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)")
-    const NavBackGround = isTopPage ? '' : 'bg-primary-100'
-    // const HoverBgColor = isTopPage ? '' : 'hover:text-white'
-
+    const flexBetween = "flex items-center justify-between";
+    const [isMenu, setIsMenu] = useState(false);
+    const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
+    const NavBackGround = isTopPage ? "" : "bg-primary-100";
+    // const HoverBgColor = isTopPage ? '' : 'hover:text-white';
 
     return (
-        <nav >
+        <nav>
             <div className={`${NavBackGround} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
@@ -24,57 +24,54 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopPage }) => {
                         <img src={isTopPage ? logo : TransitionLogo} alt="Logo" style={{ width: '12rem' }} />
 
                         {/* right */}
-                        {isAboveMediumScreen ?
-                            (
-                                <div className={`${flexBetween} w-full`}>
-                                    <div className={`${flexBetween} gap-8 text-sm`}>
-                                        <Link
-                                            className={`${isTopPage ? "" : "text-white"}`}
-                                            page="Home"
-                                            setSelectedPage={setSelectedPage}
-                                            selectedPage={selectedPage}
-                                        />
-                                        <Link
-
-                                            page="Benefits"
-                                            setSelectedPage={setSelectedPage}
-                                            selectedPage={selectedPage}
-                                        />
-                                        <Link
-                                            page="Exercises"
-                                            setSelectedPage={setSelectedPage}
-                                            selectedPage={selectedPage}
-                                        />
-                                        <Link
-                                            page="Diet"
-                                            setSelectedPage={setSelectedPage}
-                                            selectedPage={selectedPage}
-                                        />
-                                        <Link
-                                            page="Contact Us"
-                                            setSelectedPage={setSelectedPage}
-                                            selectedPage={selectedPage}
-                                        />
-                                    </div>
-                                    <div className={`${flexBetween} gap-8`}>
-                                        {/* signin page nodejs pending */}
-                                        <p>Sign In</p>
-
-                                        <ActionButton setSelectedPage={setSelectedPage}>
-                                            Become a Member
-                                        </ActionButton>
-                                    </div>
+                        {isAboveMediumScreen ? (
+                            <div className={`${flexBetween} w-full`}>
+                                <div className={`${flexBetween} gap-8 text-sm`}>
+                                    <LinkComponent
+                                        className={`${isTopPage ? "" : "text-white"}`}
+                                        page="Home"
+                                        setSelectedPage={setSelectedPage}
+                                        selectedPage={selectedPage}
+                                    />
+                                    <LinkComponent
+                                        page="Benefits"
+                                        setSelectedPage={setSelectedPage}
+                                        selectedPage={selectedPage}
+                                    />
+                                    <LinkComponent
+                                        page="Exercises"
+                                        setSelectedPage={setSelectedPage}
+                                        selectedPage={selectedPage}
+                                    />
+                                    {/* <LinkComponent
+                                        page="Diet"
+                                        setSelectedPage={setSelectedPage}
+                                        selectedPage={selectedPage}
+                                    /> */}
+                                    <LinkComponent
+                                        page="Contact Us"
+                                        setSelectedPage={setSelectedPage}
+                                        selectedPage={selectedPage}
+                                    />
                                 </div>
-                            ) :
-                            (
-                                <button
-                                    className="rounded-full p-2 bg-secondary-500"
-                                    onClick={() => setIsMenu(!isMenu)}
-                                >
-                                    <Menu className="h-6 w-6 text-white" />
-                                </button>
-                            )
-                        }
+                                <div className={`${flexBetween} gap-8`}>
+                                    {/* Signup component */}
+                                    <Link to='/gymprox/signup'>
+                                        Sign Up
+                                    </Link>
+                                    <ActionButton setSelectedPage={setSelectedPage} >
+                                        Become a Member
+                                    </ActionButton>
+                                </div>
+                            </div>
+                        ) : (
+                            <button
+                                className="rounded-full p-2 bg-secondary-500"
+                                onClick={() => setIsMenu(!isMenu)}
+                            >
+                                <Menu className="h-6 w-6 text-white" />
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
@@ -104,11 +101,11 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopPage }) => {
                             setSelectedPage={setSelectedPage}
                             selectedPage={selectedPage}
                         />
-                        <MobileLink
+                        {/* <MobileLink
                             page="Diet"
                             setSelectedPage={setSelectedPage}
                             selectedPage={selectedPage}
-                        />
+                        /> */}
                         <MobileLink
                             page="Contact Us"
                             setSelectedPage={setSelectedPage}
@@ -118,7 +115,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopPage }) => {
                 </div>
             )}
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
