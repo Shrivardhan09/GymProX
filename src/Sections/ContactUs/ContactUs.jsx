@@ -30,10 +30,10 @@ const ContactUs = ({ setSelectedPage }) => {
                         hidden: { opacity: 0, x: -50 },
                         visible: { opacity: 1, x: 0 }
                     }}>
-                    <div className="basis-3/5 font-montserrat text-3xl font-bold text-white px-9">
+                    <div className="basis-3/5 font-montserrat text-3xl sm:text-2xl font-bold text-white px-9">
                         <span className=" text-yellow-500">JOIN GYMPROX</span> TO GET IN FIT AND HEALTY
                     </div>
-                    <p className="mx-7 my-5 w-4/5 text-lg text-white">
+                    <p className="mx-7 my-5 w-4/5 md:text-lg text-white text-justify">
                         GYMPROX Gym is the perfect place to get in shape and improve your health. We offer a variety of state-of-the-art equipment, personal trainers, and group fitness classes to help you reach your fitness goals.
                     </p>
                 </motion.div>
@@ -47,7 +47,7 @@ const ContactUs = ({ setSelectedPage }) => {
                             className="flex justify-start items-center gap-3 flex-col"
                         >
                             <input
-                                className="mb-3 w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
+                                className="mb-3 md:w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
                                 type="text"
                                 {...register("name", {
                                     required: true,
@@ -63,7 +63,7 @@ const ContactUs = ({ setSelectedPage }) => {
                                 </p>
                             )}
                             <input
-                                className="mb-3 w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
+                                className="mb-3 md:w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
                                 type="email"
                                 {...register("email", {
                                     required: true,

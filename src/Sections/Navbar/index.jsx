@@ -4,7 +4,7 @@ import LinkComponent from "./Link";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
 import ActionButton from "@/shared/ActionButton";
-import TransitionLogo from "@/assets/logoTransition.png";
+// import TransitionLogo from "@/assets/logoTransition.png";
 import MobileLink from "./MobileLink";
 import { Link } from "react-router-dom"
 
@@ -21,7 +21,7 @@ const Navbar = ({ selectedPage, setSelectedPage, isTopPage }) => {
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         {/* left */}
-                        <img src={isTopPage ? logo : TransitionLogo} alt="Logo" style={{ width: '12rem' }} />
+                        <img src={isTopPage ? logo : './logoTransition.png'} alt="Logo" style={{ width: '12rem' }} />
 
                         {/* right */}
                         {isAboveMediumScreen ? (
