@@ -47,7 +47,7 @@ const ContactUs = ({ setSelectedPage }) => {
                             className="flex justify-start items-center gap-3 flex-col"
                         >
                             <input
-                                className="mb-3 md:w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
+                                className="mb-3 md:w-2/5 xs:w-4/5 sm:w-1/2 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
                                 type="text"
                                 {...register("name", {
                                     required: true,
@@ -63,7 +63,7 @@ const ContactUs = ({ setSelectedPage }) => {
                                 </p>
                             )}
                             <input
-                                className="mb-3 md:w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
+                                className="mb-3 md:w-2/5 xs:w-4/5 sm:w-1/2  rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
                                 type="email"
                                 {...register("email", {
                                     required: true,
@@ -79,7 +79,7 @@ const ContactUs = ({ setSelectedPage }) => {
                                 </p>
                             )}
                             <textarea
-                                className="mb-3 w-2/5 rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
+                                className="mb-3 md:w-2/5 xs:w-4/5 sm:w-1/2  rounded-lg bg-black/25 px-5 py-3 placeholder-white border-2 border-primary-300 caret-yellow-500 outline-none text-white"
                                 placeholder="MESSAGE"
                                 rows={4}
                                 cols={50}

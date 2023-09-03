@@ -3,14 +3,16 @@ import HText from "../../shared/HText";
 import { X } from 'lucide-react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../FireBase/firebase'
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; // Correct import statement
+
 
 const LogIn = () => {
     const [fields, setFields] = useState({
         email: '',
         password: '',
     });
-    // const [close, setClose] = useState(true);
-
+    const navigate = useNavigate()
     const onChange = (e) => {
         const { name, value } = e.target;
         setFields((prev) => ({ ...prev, [name]: value }));
@@ -23,7 +25,8 @@ const LogIn = () => {
             .then((userCredential) => {
                 // Successfully signed in
                 const user = userCredential.user;
-                console.log(user)
+                navigate('/')
+                // console.log(user)
                 // Handle successful sign-in here
             })
             .catch((error) => {
@@ -63,6 +66,7 @@ const LogIn = () => {
                             value={fields.password}
                             placeholder="Enter your password"
                             onChange={onChange}
+                            autocomplete="current-password"
                             className="w-full px-4 py-3 rounded-lg bg-white placeholder-white border border-gray-300 focus:outline-none focus:ring focus:border-primary-300"
                         />
                     </div>
