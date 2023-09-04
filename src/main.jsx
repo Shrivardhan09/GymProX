@@ -9,7 +9,7 @@ import {
 import ExerciseDetails from './Sections/Exercise/ExerciseDetails/ExerciseDetails.jsx'
 
 import Signup from './Sections/Auth/Signup.jsx'
-import LogIn from './Sections/Auth/Login.jsx'
+import LogIn from './Sections/Auth/LogIn.jsx'
 
 
 

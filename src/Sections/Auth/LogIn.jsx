@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../FireBase/firebase'
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"; // Correct import statement
+import { Link } from "react-router-dom";
 
 
 const LogIn = () => {
