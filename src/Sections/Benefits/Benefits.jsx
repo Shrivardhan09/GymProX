@@ -28,7 +28,7 @@ const benefitsArr = [
 
 const Benefits = ({ setSelectedPage }) => {
     return (
-        <section className="mx-auto min-h-full py-20 w-5/6" >
+        <section className="mx-auto min-h-full py-20 w-5/6" id="benefits">
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
             >

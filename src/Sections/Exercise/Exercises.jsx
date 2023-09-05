@@ -63,7 +63,7 @@ const ExercisesGYM = ({ setSelectedPage }) => {
         <motion.div
             className="flex justify-center items-center flex-col md:my-3 min-h-full"
             onViewportEnter={() => setSelectedPage(SelectedPage.Exercises)}
-
+            id="exercises"
         >
             <motion.div
                 className="font-montserrat font-medium md:text-5xl text-3xl md:w-2/4 text-center"
